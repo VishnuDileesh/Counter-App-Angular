@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-decrement-btn',
   templateUrl: './decrement-btn.component.html',
-  styleUrls: ['./decrement-btn.component.css']
+  styleUrls: ['./decrement-btn.component.css'],
 })
 export class DecrementBtnComponent implements OnInit {
+  @Output decrement: EventEmitter = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  minusClicked() {
+    this.decrement.emit(null);
   }
-
 }

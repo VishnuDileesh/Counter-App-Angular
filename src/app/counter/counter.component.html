@@ -1,7 +1,7 @@
 <div>
   <app-display-counter [counter]="counterValue"></app-display-counter>
   <div class="btns">
-    <app-increment-btn></app-increment-btn>
-    <app-decrement-btn></app-decrement-btn>
+    <app-increment-btn (increment)="plusToCounter($event)"></app-increment-btn>
+    <app-decrement-btn (decrement)="minusToCounter($event)"></app-decrement-btn>
   </div>
 </div>

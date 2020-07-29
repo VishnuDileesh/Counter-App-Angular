@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-increment-btn',
   templateUrl: './increment-btn.component.html',
-  styleUrls: ['./increment-btn.component.css']
+  styleUrls: ['./increment-btn.component.css'],
 })
 export class IncrementBtnComponent implements OnInit {
+  @Output increment: EventEmitter = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  plusClicked() {
+    this.increment.emit(null);
   }
-
 }
