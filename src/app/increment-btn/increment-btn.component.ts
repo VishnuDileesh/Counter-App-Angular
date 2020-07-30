@@ -6,13 +6,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./increment-btn.component.css'],
 })
 export class IncrementBtnComponent implements OnInit {
-  @Output increment: EventEmitter = new EventEmitter();
+  @Output() increment: EventEmitter<any> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  plusClicked() {
+  plusClicked(): any {
     this.increment.emit(null);
   }
 }

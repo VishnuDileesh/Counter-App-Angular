@@ -6,13 +6,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./decrement-btn.component.css'],
 })
 export class DecrementBtnComponent implements OnInit {
-  @Output decrement: EventEmitter = new EventEmitter();
+  @Output() decrement: EventEmitter<any> = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  minusClicked() {
+  minusClicked(): any {
     this.decrement.emit(null);
   }
 }

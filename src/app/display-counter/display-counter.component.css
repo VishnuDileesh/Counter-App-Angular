@@ -2,5 +2,13 @@ h1 {
   font-weight: bold;
   font-size: 30rem;
   text-align: center;
-  color: #ff1d44;
+  color: #ecf0f1;
+}
+
+.positive {
+  color: #2ecc71;
+}
+
+.negative {
+  color: #e74c3c;
 }
